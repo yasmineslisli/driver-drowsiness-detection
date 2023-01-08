@@ -5,6 +5,8 @@ import dlib
 import imutils
 from imutils import face_utils
 from matplotlib import pyplot as plt
+import os
+os.add_dll_directory(r'C:\Program Files\VideoLAN\VLC')
 import vlc
 import train as train
 import sys, webbrowser, datetime
@@ -64,14 +66,14 @@ def writeEyes(a, b, img):
     x1 = b[0][0]
     x2 = b[3][0]
     cv2.imwrite('right-eye.jpg', img[y1:y2, x1:x2])
-# open_avg = train.getAvg()
-# close_avg = train.getAvg()
+#open_avg = train.getAvg()
+#close_avg = train.getAvg()
 
-alert = vlc.MediaPlayer('focus.mp3')
+alert = vlc.MediaPlayer('alert-sound.mp3')
 
-frame_thresh_1 = 15
-frame_thresh_2 = 10
-frame_thresh_3 = 5
+frame_thresh_1 = 30      #15
+frame_thresh_2 = 30    #10
+frame_thresh_3 = 30    #5
 
 close_thresh = 0.3#(close_avg+open_avg)/2.0
 flag = 0
@@ -147,7 +149,7 @@ while(True):
             map_flag=1
             map_counter=0
             vlc.MediaPlayer('take_a_break.mp3').play()
-            webbrowser.open("https://www.google.com/maps/search/hotels+or+motels+near+me")
+            #webbrowser.open("https://www.google.com/maps/search/hotels+or+motels+near+me")
 
         cv2.drawContours(gray, [leftEyeHull], -1, eyeContourColor, 2)
         cv2.drawContours(gray, [rightEyeHull], -1, eyeContourColor, 2)

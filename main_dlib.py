@@ -28,7 +28,7 @@ def writeEyes(a, b, img):
 # close_avg = train.getAvg()
 
 alert = vlc.MediaPlayer('alert-sound.mp3')
-frame_thresh = 15
+frame_thresh = 30
 close_thresh = 0.3#(close_avg+open_avg)/2.0
 flag = 0
 
