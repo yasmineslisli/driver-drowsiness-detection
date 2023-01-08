@@ -160,4 +160,5 @@ while(True):
         break
         
 capture.release()
+print("Hello")
 cv2.destroyAllWindows()
