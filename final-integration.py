@@ -149,8 +149,7 @@ while(True):
             map_flag=1
             map_counter=0
             vlc.MediaPlayer('take_a_break.mp3').play()
-            #webbrowser.open("https://www.google.com/maps/search/hotels+or+motels+near+me")
-
+            
         cv2.drawContours(gray, [leftEyeHull], -1, eyeContourColor, 2)
         cv2.drawContours(gray, [rightEyeHull], -1, eyeContourColor, 2)
         writeEyes(leftEye, rightEye, frame)

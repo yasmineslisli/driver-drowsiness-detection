@@ -72,7 +72,7 @@ alert = vlc.MediaPlayer('alert/alert-sound.mp3')
 frame_thresh_1 = 30
 frame_thresh_2 = 30
 frame_thresh_3 = 30
-close_thresh = 0.25 
+close_thresh = 0.18 
 
 flag = 0
 yawn_countdown = 0
